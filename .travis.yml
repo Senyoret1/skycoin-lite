@@ -5,9 +5,7 @@ language: go
 go:
   - "1.12.x"
 
-env:
-  - GOOS: js
-  - GOARCH: wasm
+go_import_path: github.com/skycoin/skycoin-lite
 
 install:
   - GOOS=js GOARCH=wasm go get -t ./...
@@ -17,11 +15,11 @@ install:
 
 script:
   - make check
-  - make build-js-min
+  #- make build-js-min
   - make build-wasm
-  - make test-suite-ts
+  #- make test-suite-ts
   - make test-suite-ts-wasm
 
 notifications:
   # https://github.com/kvld/travisci-telegram TravisCI Telegram Bot integration
-  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
+  # webhooks: https://fathomless-fjord-24024.herokuapp.com/notify

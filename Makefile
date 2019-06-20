@@ -32,25 +32,7 @@ test:
 
 lint: ## Run linters. Use make install-linters first.
 	vendorcheck ./...
-	gometalinter --deadline=3m -j 2 --disable-all --tests --exclude .. --vendor \
-		-E goimports \
-		-E unparam \
-		-E deadcode \
-		-E errcheck \
-		-E gosec \
-		-E goconst \
-		-E gofmt \
-		-E golint \
-		-E ineffassign \
-		-E maligned \
-		-E megacheck \
-		-E misspell \
-		-E nakedret \
-		-E structcheck \
-		-E unconvert \
-		-E varcheck \
-		-E vet \
-		./...
+	gometalinter --disable-all -E goimports --tests --vendor ./...
 
 check: lint test ## Run tests and linters
 

@@ -10,8 +10,8 @@ go_import_path: github.com/skycoin/skycoin-lite
 install:
   - GOOS=js GOARCH=wasm go get -t ./...
   - make install-linters
-  - npm install
-  - npm install --global source-map-support
+  #- npm install
+  #- npm install --global source-map-support
 
 script:
   - make check

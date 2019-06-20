@@ -5,6 +5,10 @@ language: go
 go:
   - "1.12.x"
 
+env:
+  - GOOS=js
+  - GOARCH=wasm
+
 install:
   - go get -t ./...
   - make install-linters

@@ -31,8 +31,8 @@ test:
 	go test ./... -timeout=10m -cover
 
 lint: ## Run linters. Use make install-linters first.
-	vendorcheck ./...
-	gometalinter --deadline=3m -j 2 --disable-all --tests --exclude .. --vendor \
+	GOOS=js GOARCH=wasm vendorcheck ./...
+	GOOS=js GOARCH=wasm gometalinter --deadline=3m -j 2 --disable-all --tests --exclude .. --vendor \
 		-E goimports \
 		-E unparam \
 		-E deadcode \

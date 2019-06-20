@@ -43,7 +43,6 @@ lint: ## Run linters. Use make install-linters first.
 		-E golint \
 		-E ineffassign \
 		-E maligned \
-		-E staticcheck \
 		-E misspell \
 		-E nakedret \
 		-E structcheck \

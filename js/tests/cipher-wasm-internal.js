@@ -2,6 +2,7 @@
 // It needs the tests to be compiled, so it was created for being called by "make test-suite-ts-wasm"
 
 // Required for wasm_exec to work correctly in Node.js.
+global.process.title = '';
 const util = require('util');
 TextEncoder = util.TextEncoder;
 TextDecoder = util.TextDecoder

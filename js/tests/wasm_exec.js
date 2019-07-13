@@ -439,7 +439,9 @@
 		}
 	}
 
+	console.log(2222222);
 	if (isNodeJS) {
+		console.log(1111111111111111);
 		if (process.argv.length < 3) {
 			process.stderr.write("usage: go_js_wasm_exec [wasm binary] [arguments]\n");
 			process.exit(1);

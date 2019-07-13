@@ -36,7 +36,7 @@ test-suite-ts-wasm: ## Run the ts version of the cipher test suite for wasm and 
 	cd vendor/github.com/skycoin/skycoin/src/cipher/secp256k1-go/secp256k1-go2 && rm test.wasm
 
 test:
-	GOOS=js GOARCH=wasm go test ./... -timeout=10m -cover
+	go test ./... -timeout=10m -cover
 
 lint: ## Run linters. Use make install-linters first.
 	vendorcheck ./...
